@@ -1,5 +1,5 @@
-# loopback-sandbox
+# loopback-sandbox for token crash
 
-A repository for reproducing [LoopBack community issues][wiki-issues].
+This sandbox reproduces the issue with lack of proper context in token and server crash.
 
-[wiki-issues]: https://github.com/strongloop/loopback/wiki/Reporting-issues
+To test the issue, run `node .` and open up http://0.0.0.0:3000/explorer in a browser
