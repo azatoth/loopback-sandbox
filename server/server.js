@@ -22,7 +22,10 @@ app.start = function() {
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {
   if (err) throw err;
-
+  app.middleware('auth', app.loopback.token({
+    model: app.models.accessToken,
+    currentUserLiteral: 'me'
+  }));
   // start the server if `$ node server.js`
   if (require.main === module)
     app.start();

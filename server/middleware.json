@@ -3,6 +3,7 @@
     "loopback#favicon": {}
   },
   "initial": {
+    "loopback-context#per-request": {},
     "compression": {},
     "cors": {
       "params": {
@@ -26,11 +27,18 @@
     "helmet#hidePoweredBy": {},
     "helmet#ieNoOpen": {},
     "helmet#noSniff": {},
-    "helmet#noCache": { 
+    "helmet#noCache": {
       "enabled": false
     }
   },
   "session": {
+    "loopback#session": {
+      "params": {
+        "secret": "kitty",
+        "saveUninitialized": true,
+        "resave": true
+      }
+    }
   },
   "auth": {
   },
